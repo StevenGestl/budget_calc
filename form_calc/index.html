@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+        function displayTotal() {
+           if (varA = document.querySelector('input[name="question_one"]:checked').value  ) {
+            document.getElementById("demo").innerHTML = varA };
+           
+        }
 
     </script>
     <title></title>
@@ -12,12 +17,12 @@
     <h2>Budget Planner</h2>
 <div id="budget_div">
     <div id="question_one">
-        <input type="radio" id="d" name="question_one">
+        <input type="radio" value="1" id="d" name="question_one">
         <label for="html">radio 1</label>
-        <input type ="radio" id="d" name="question_one">
+        <input type ="radio" value="2" id="d" name="question_one">
         <label for="html">radio 2</label>
-        <input type="radio" id="d" name="question_one">
-        <label for="html">radio 3</label>
+        <input type="radio" id="d" value="3" name="question_one">
+        <label for="html" >radio 3</label>
     </div>
     <div id="question_two">
         <input type="radio" id="d" name="question_two">
@@ -27,10 +32,11 @@
         <input type="radio" id="d" name="question_two">
         <label for="html">radio 3</label>
     </div>
+    <button type="button" onclick="displayTotal()">Try it</button>
 </div>
         <div class="info">
             <!--display budget total-->
-            <div id="display_element" style="display: none">
+            <div id="display_element">
               <p id="demo"></p>
             </div>
 
