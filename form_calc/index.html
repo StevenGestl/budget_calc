@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        function displayTotal() {
-           if (varA = document.querySelector('input[name="question_one"]:checked').value  ) {
-            document.getElementById("demo").innerHTML = varA };
-           
+        function displayTotal_A() {
+            
+           if (varA = document.querySelector('input[name="question_one"]:checked').value  )
+           //console.log(typeof varA);
+           Number(varA)
+           //console.log(typeof Number(varA));
+        }
+
+        function displayTotal_B() {
+           if (varB = document.querySelector('input[name="question_two"]:checked').value  ) 
+            Number(varB)
+        }
+
+        function total() {
+            total = Number(varA) + Number(varB);
+            document.getElementById("demo").innerHTML = "$ " + total ;
         }
 
     </script>
@@ -18,26 +30,28 @@
 <div id="budget_div">
     <div id="question_one">
         <input type="radio" value="1" id="d" name="question_one">
-        <label for="html">radio 1</label>
+        <label for="html">1</label>
         <input type ="radio" value="2" id="d" name="question_one">
-        <label for="html">radio 2</label>
+        <label for="html">2</label>
         <input type="radio" id="d" value="3" name="question_one">
-        <label for="html" >radio 3</label>
+        <label for="html" >3</label>
     </div>
     <div id="question_two">
-        <input type="radio" id="d" name="question_two">
-        <label for="html">radio 1</label>
-        <input type ="radio" id="d" name="question_two">
-        <label for="html">radio 2</label>
-        <input type="radio" id="d" name="question_two">
-        <label for="html">radio 3</label>
+        <input type="radio" value="1" id="d" name="question_two">
+        <label for="html">1</label>
+        <input type ="radio" value="2" id="d" name="question_two">
+        <label for="html">2</label>
+        <input type="radio" value="3" id="d" name="question_two">
+        <label for="html">3</label>
     </div>
-    <button type="button" onclick="displayTotal()">Try it</button>
+    <button type="button" onclick="displayTotal_A(); displayTotal_B(); total()">Try it</button>
 </div>
         <div class="info">
             <!--display budget total-->
             <div id="display_element">
-              <p id="demo"></p>
+                <p id="demo_one"></p>
+                <p id="demo_two"></p>
+                <p id="demo"></p>
             </div>
 
 </body>
